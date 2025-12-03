@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+h1 {
+    text-align: center;  
+
+    margin: 3rem auto;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+
+
+.container{
+  margin: auto 10%;
+  justify-content: center;
+  line-height: 1.5rem;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto; /* Texto ocupa espaço restante, imagem com tamanho automático */
+  background-color: #85A887;
+  border-radius: 6px;
+  padding: 2rem;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container input{
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid gray;
+  border-radius: 2.5px;
+  outline: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container label{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+  width: fit-content;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+
+
+.container input[type="submit"]{
+  width: 100px;
+  background-color: slateblue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: none;
+  
+
+
+}
+.container input[type="submit"]:hover{
+  background-color: darkslateblue;
+  transition: all 0.3s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+
+.container input[type="submit"]:focus:hover{
+  border-bottom: none;
 }
 
-.read-the-docs {
-  color: #888;
+.container input[type="submit"]:not(:focus){
+  border-bottom: none;
 }
+
+.container input:focus~.onHover{
+  transition: all 0.3s ease-in-out;
+  border-bottom: 2px solid darkslateblue;
+
+}
+.container input:not(:focus){
+  transition: all 0.5s ease-out;
+  border-bottom: 2px solid gray;
+}
+
