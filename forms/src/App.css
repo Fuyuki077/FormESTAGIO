@@ -1,6 +1,6 @@
 h1 {
     text-align: center;  
-
+    transition: all 0.5s ease-in-out;
     margin: 3rem auto;
     font-family: 'Lucida Sans', sans-serif;
 }
@@ -9,15 +9,26 @@ h1 {
 
 .container{
   margin: auto 10%;
-  justify-content: center;
+  width: 80%;
   line-height: 1.5rem;
   text-align: center;
-  display: grid;
   grid-template-columns: 1fr auto; /* Texto ocupa espaço restante, imagem com tamanho automático */
-  background-color: #85A887;
+  background-color: #F0F4F0;
   border-radius: 6px;
   padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
 
+  display: flex;              /* Mude de grid para flex */
+  flex-direction: column;     /* Organiza em coluna */
+  justify-content: center;    /* Centraliza verticalmente */
+  align-items: center;        /* Centraliza horizontalmente */
+}
+
+/* ESTILO PARA O FORM DENTRO DO CONTAINER */
+.container form {
+  width: 100%;
+  max-width: 400px;           /* Largura máxima para o formulário */
 }
 
 .container input{
@@ -27,19 +38,23 @@ h1 {
   border-bottom: 2px solid gray;
   border-radius: 2.5px;
   outline: none;
+
+  display: flex;
+  flex-direction: column;     /* Label acima do input */
+  width: 100%;
 }
 
 .container label{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  display: inline-block;
-  width: fit-content;
-  text-align: right;
-  margin-right: 10px;
   font-size: 12px;
   font-weight: bold;
-
+  text-align: left;           /* Alinha à esquerda */
+  margin-bottom: 0.5rem;      /* Espaço entre label e input */
+  color: #333;
+  display: flex;
+  padding-left: 0.5rem;
+  flex-direction: column; 
 }
-
 
 
 
@@ -57,24 +72,40 @@ h1 {
 .container input[type="submit"]:hover{
   background-color: darkslateblue;
   transition: all 0.3s ease-in-out;
-}
-
-
-.container input[type="submit"]:focus:hover{
   border-bottom: none;
-}
 
+}
 .container input[type="submit"]:not(:focus){
   border-bottom: none;
-}
+} 
 
-.container input:focus~.onHover{
-  transition: all 0.3s ease-in-out;
+.container input:focus{
+  transition: all 0.5s ease-in-out;
   border-bottom: 2px solid darkslateblue;
-
 }
+
 .container input:not(:focus){
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
   border-bottom: 2px solid gray;
 }
 
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Em telas pequenas, uma coluna */
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .container label {
+    margin: 0 0 5px 0;
+
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    transition: all 0.5s ease-in-out;
+  }
+}
