@@ -112,7 +112,96 @@ function App() {
         </div>
 
         <div>
-          <input type="submit" value="Enviar" />
+          <label htmlFor="reservista_pcd">
+            Sou pessoa com deficiência (PCD) e quero me candidatar às vagas reservadas aos(às) candidatos(as) PCD.
+          </label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <input 
+              type="checkbox" 
+              id="reservista_pcd" 
+              name="reservista_pcd" 
+            />
+            <label htmlFor="reservista_pcd">
+              Marque aqui se é PCD.
+            </label>
+          </div>
+        </div>
+
+
+        <div>
+          <label htmlFor="especifico_reservista">Especificar a deficiência</label>
+          <input 
+            type="text" 
+            id="especifico_reservista" 
+            name="especifico_reservista" 
+            placeholder="Especificar a deficiência" 
+          />
+        </div>
+
+        <div>
+          <label htmlFor="pdf_laudo">Inserir o Laudo Médico (original ou cópia autenticada) em pdf. (PCD)</label>
+          <input 
+            type="file" 
+            id="pdf_laudo" 
+            name="pdf_laudo" 
+            accept=".pdf"
+          />
+        </div>
+
+       <div>
+  <label>
+    Quero me candidatar às vagas reservadas...
+  </label>
+  
+  <div style={{ display: 'flex', gap: '20px' }}>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <input type="checkbox" id="teste1" />
+      <label htmlFor="teste1">
+        Negro
+      </label>
+    </div>
+    
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <input type="checkbox" id="teste2" />
+      <label htmlFor="teste2">
+        Indígena
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div>
+          <label htmlFor="pdf_historico">Inserir o Histórico Escolar em pdf.</label>
+          <input 
+            type="file"
+            id="pdf_historico" 
+            name="pdf_historico" 
+            accept=".pdf"
+            required 
+          />
+        </div>
+
+        <div>
+          <label htmlFor="pdf_matricula">Inserir aqui o arquivo (pdf) da Declaração de Matrícula. </label>
+          <input 
+            type="file"
+            id="pdf_matricula" 
+            name="pdf_matricula" 
+            accept=".pdf"
+            required
+          />
+        </div>
+        <label htmlFor="pdf_foto">Inserir aqui o arquivo (em pdf) do Documento Oficial com foto.</label>
+        <input 
+          type="file"
+          id="pdf_foto" 
+          name="pdf_foto" 
+          accept=".pdf"
+          required
+        />
+        <div>
+
+        <input type="submit" value="Enviar" />
         </div>
       </form>
       </div>
