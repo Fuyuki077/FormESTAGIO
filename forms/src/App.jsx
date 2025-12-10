@@ -63,6 +63,7 @@ function App() {
             name="semestre" 
             min="5" 
             max="10" 
+            pattern="[5-10]*"
             placeholder="Digite seu semestre atual (min 5°)" 
             required 
           />
@@ -163,7 +164,7 @@ function App() {
                 </label>
               </div>
             </li>
-            
+
             <li>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input 
