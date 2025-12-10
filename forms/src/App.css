@@ -3,8 +3,21 @@ h1 {
     transition: all 0.5s ease-in-out;
     margin: 3rem auto;
     font-family: 'Lucida Sans', sans-serif;
+    color: white;
+    transform: perspective(500px) rotateX(10deg);
+    transition: transform 0.4s ease;
+    scale: 0.9;
 }
 
+h1:hover {
+  transform: perspective(500px) rotateX(0deg);
+}
+
+ul {
+  list-style-type: none; /* Remove as bolinhas */
+  /* ou */
+  list-style: none; /* Remove bolinhas e outros marcadores */
+}
 
 
 .container{
@@ -17,18 +30,20 @@ h1 {
   border-radius: 6px;
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s ease-in-out;
+
 
   display: flex;              /* Mude de grid para flex */
   flex-direction: column;     /* Organiza em coluna */
   justify-content: center;    /* Centraliza verticalmente */
   align-items: center;        /* Centraliza horizontalmente */
+
 }
 
 /* ESTILO PARA O FORM DENTRO DO CONTAINER */
 .container form {
   width: 100%;
-  max-width: 400px;           /* Largura máxima para o formulário */
+  max-width: 400px;          /* Largura máxima para o formulário */
+
 }
 
 .container input{
@@ -47,9 +62,10 @@ h1 {
 
 .container label{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
+
   font-weight: bold;
-  text-align: left;           /* Alinha à esquerda */
+  text-align: justify;
   margin-bottom: 0.5rem;      /* Espaço entre label e input */
   color: #333;
   display: flex;
@@ -57,7 +73,18 @@ h1 {
   flex-direction: column; 
 }
 
+.container input[type="text"]{
+  cursor: text;
+}
+.container input[type="email"]{
+  cursor: text;
+}
 
+.container input[type="checkbox"]{
+  width: auto;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
 
 .container input[type="submit"]{
   width: 100px;
@@ -89,6 +116,7 @@ h1 {
   transition: all 0.5s ease-in-out;
   border-bottom: 2px solid gray;
 }
+
 
 @media (max-width: 768px) {
   .container {

@@ -6,10 +6,10 @@ function App() {
   return (
     <>
       <div>
-      <h1>Formulário de Estágio</h1>
+      <h1>Caro(a) candidato(a). Faça sua inscrição aqui.</h1>
       <div className='container'>
       <form action="/processar-dados" method="post">
-        <div className="onHover">
+        <div /* Nome Completo */>
           <label  htmlFor="nome">Nome</label>
           <input 
             type="text" 
@@ -20,7 +20,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Email */>
           <label htmlFor="email">Email</label>
           <input 
             type="email" 
@@ -31,7 +31,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Telefone */>
           <label htmlFor="telefone">Telefone</label>
           <input 
             type="tel" 
@@ -44,7 +44,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Endereço */>
           <label htmlFor="endereço">Endereço</label>
           <input 
             type="text" 
@@ -55,7 +55,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Semestre Atual */>
           <label htmlFor="semestre">Semestre Atual</label>
           <input 
             type="number" 
@@ -63,12 +63,12 @@ function App() {
             name="semestre" 
             min="5" 
             max="10" 
-            placeholder="Digite seu semestre atual" 
+            placeholder="Digite seu semestre atual (min 5°)" 
             required 
           />
         </div>
 
-        <div>
+        <div /* RG */>
           <label htmlFor="RG">Número do RG</label>
           <input 
             type="text" 
@@ -79,7 +79,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* CPF */>
           <label htmlFor="CPF">Número do CPF</label>
           <input 
             type="text" 
@@ -90,7 +90,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Data de Nascimento */>
           <label htmlFor="date">Data de Nascimento</label>
           <input 
             type="date" 
@@ -100,7 +100,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Instituição de Ensino */>
           <label htmlFor="instituicao">Universidade/Faculdade</label>
           <input 
             type="text" 
@@ -111,7 +111,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* PCD */>
           <label htmlFor="reservista_pcd">
             Sou pessoa com deficiência (PCD) e quero me candidatar às vagas reservadas aos(às) candidatos(as) PCD.
           </label>
@@ -128,17 +128,17 @@ function App() {
         </div>
 
 
-        <div>
-          <label htmlFor="especifico_reservista">Especificar a deficiência</label>
+        <div /* Especificar a deficiência */>
+          <label htmlFor="especifico_pcd">Especificar a deficiência</label>
           <input 
             type="text" 
-            id="especifico_reservista" 
-            name="especifico_reservista" 
+            id="especifico_pcd" 
+            name="especifico_pcd" 
             placeholder="Especificar a deficiência" 
           />
         </div>
 
-        <div>
+        <div /* Laudo Médico PCD */>
           <label htmlFor="pdf_laudo">Inserir o Laudo Médico (original ou cópia autenticada) em pdf. (PCD)</label>
           <input 
             type="file" 
@@ -148,29 +148,37 @@ function App() {
           />
         </div>
 
-       <div>
-  <label>
-    Quero me candidatar às vagas reservadas...
-  </label>
-  
-  <div style={{ display: 'flex', gap: '20px' }}>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <input type="checkbox" id="teste1" />
-      <label htmlFor="teste1">
-        Negro
-      </label>
-    </div>
-    
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <input type="checkbox" id="teste2" />
-      <label htmlFor="teste2">
-        Indígena
-      </label>
-    </div>
-  </div>
-</div>
+        <div /* Vagas Reservadas para Negros e Indígenas */>
+          <label>
+            Quero me candidatar às vagas reservadas...
+          </label>
+          <ul>
+            <li> 
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input 
+                type="checkbox" 
+                id="teste1" />
+                <label htmlFor="teste1">
+                  Negro
+                </label>
+              </div>
+            </li>
+            
+            <li>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input 
+                type="checkbox" 
+                id="teste2" />
+                <label htmlFor="teste2">
+                  Indígena
+                </label>
+              </div>
+            </li>
 
-        <div>
+          </ul>
+        </div>
+
+        <div /* Histórico Escolar */>
           <label htmlFor="pdf_historico">Inserir o Histórico Escolar em pdf.</label>
           <input 
             type="file"
@@ -181,7 +189,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div /* Declaração de Matrícula */>
           <label htmlFor="pdf_matricula">Inserir aqui o arquivo (pdf) da Declaração de Matrícula. </label>
           <input 
             type="file"
@@ -191,7 +199,9 @@ function App() {
             required
           />
         </div>
-        <label htmlFor="pdf_foto">Inserir aqui o arquivo (em pdf) do Documento Oficial com foto.</label>
+
+        <div /* Documento Oficial com Foto */>
+        <label htmlFor="pdf_foto">Inserir aqui o arquivo (pdf) do Documento Oficial com foto.</label>
         <input 
           type="file"
           id="pdf_foto" 
@@ -199,8 +209,9 @@ function App() {
           accept=".pdf"
           required
         />
-        <div>
+        </div>
 
+        <div /* Submit Button */>
         <input type="submit" value="Enviar" />
         </div>
       </form>
