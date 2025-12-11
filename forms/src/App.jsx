@@ -6,7 +6,16 @@ function App() {
   return (
     <>
       <div>
-      <h1>Caro(a) candidato(a). Faça sua inscrição aqui.</h1>
+      <h1><span></span></h1>
+      <div className='container'>
+        <h1>Caro(a) candidato(a). Faça sua inscrição aqui.</h1>
+        <p><b>Período de Inscrição: 5 a 24 de novembro de 2024 ..... (ATENÇÃO: ATÉ 24.11.2024, ÀS 23h59min)</b></p>
+        <p><b>Quem pode se inscrever:</b> Alunos(as) matriculados(as) no curso de Graduação em Direito a partir do 5º Semestre</p>
+        <p><b>Quem pode ser convocado:</b> Alunos(as) matriculados(as) no curso de Graduação em Direito a partir do 7º Semestre</p>
+        <p>Especial atenção às respostas e aos arquivos obrigatórios.</p>
+        <p>Boa sorte!</p>
+        <p>A Comissão Organizadora.</p>
+      </div>
       <div className='container'>
       <form action="/processar-dados" method="post">
         <div /* Nome Completo */>
