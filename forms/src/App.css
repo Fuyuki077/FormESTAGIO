@@ -175,6 +175,11 @@ ul {
     transition: all 0.5s ease-in-out;
   }
 
+  .container h1{
+    margin: 2rem auto 3rem;
+    font-size: 3rem;
+  }
+
   .container input {
     font-size: 1.8rem;
     line-height: 3rem;
