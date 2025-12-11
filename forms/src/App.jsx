@@ -18,6 +18,7 @@ function App() {
     </div>
 
     <div className='container'>
+      <h3>Informações Pessoais</h3>
       <div /* Nome Completo */>
         <label  htmlFor="nome">Nome</label>
         <input 
@@ -44,13 +45,14 @@ function App() {
         <label htmlFor="telefone">Telefone</label>
         <input 
           type="tel" 
-          pattern="(\([0-9]{2}\)\s?)?[9]?[0-9]{4,5}-?[0-9]{4}"
+          pattern="(\+?55)?\s?\(?(\d{2})\)?\s?9?\d{4,5}-?\d{4}"
           id="telefone" 
           name="telefone" 
           placeholder="(00) 90000-0000 ou 0000-0000"
           title="Formato: (DDD) 9XXXX-XXXX ou XXXX-XXXX"
           required
         />
+        
       </div>
 
       <div /* Endereço */>
@@ -112,6 +114,7 @@ function App() {
     </div>
 
     <div className='container'>
+      <h3>Informaçoes Acadêmicas</h3>
         <div /* Instituição de Ensino */>
           <label htmlFor="instituicao">Universidade/Faculdade</label>
           <input 
@@ -159,6 +162,7 @@ function App() {
     </div>
 
     <div className='container'>
+      <h3>Reservistas</h3>
       <div /* Vagas Reservadas para Negros e Indígenas */>
         <label>
           Quero me candidatar às vagas reservadas...

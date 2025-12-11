@@ -5,6 +5,10 @@ h1 {
     color: white;
 }
 
+h3  {
+  margin-bottom: 1rem;
+}
+
 ul {
   list-style: none; /* Remove bolinhas e outros marcadores */
 }
@@ -16,9 +20,8 @@ ul {
   line-height: 1.5rem;
   background-color: rgba(245, 255, 255, 0.705);
   border-radius: 6px;
-  border: 10px double rgba(147, 147, 147, 0.261);
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.344);
 
 
   display: flex;              /* Mude de grid para flex */
@@ -33,8 +36,9 @@ ul {
 }
 
 .container h1{
-  margin: 1rem 3rem 3rem 3rem;
+  margin: auto auto 2rem;
   color: #1d1d1d;
+  line-height: 2rem;
 }
 
 .container input{
@@ -68,6 +72,25 @@ ul {
   text-align: justify;
 }
 
+
+.container input:focus{
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(245, 245, 245, 0.582);
+  border-bottom: 2px solid darkslateblue;
+}
+
+.container input:not(:focus){
+  transition: all 0.5s ease-in-out;
+  border-bottom: 2px solid gray;
+}
+
+.container input:hover {
+  transform: scale(1.02);
+  background-color: rgba(245, 245, 245, 0.582);
+  border-bottom: 2px solid darkslateblue;
+  transition: all 0.3s ease;
+}
+
 .container input[type="text"]{
   cursor: text;
 }
@@ -88,7 +111,7 @@ ul {
 }
 
 .container input[type="submit"]{
-  width: 100px;
+  width:fit-content;
   background-color: slateblue;
   color: white;
   font-weight: bold;
@@ -108,43 +131,29 @@ ul {
 }
 
 .container input[type="reset"]{
-  width: 100px;
+  width: fit-content;
   background-color: slategray;
   color: white;
   font-weight: bold;
   cursor: pointer;
   border-bottom: none;
+  float: left;
 }
 
 .container input[type="reset"]:hover{
   background-color: #404040;
 }
 
-.container input[type="reset"]:not(:focus){
-  border-bottom: none;
-}
-
 .container input[type="reset"]:focus{
   border-bottom: none;
+  background-color: 0;
 }
 
-.container input:focus{
-  transition: all 0.3s ease-in-out;
-  background-color: rgba(245, 245, 245, 0.582);
-  border-bottom: 2px solid darkslateblue;
+.container input[type="reset"]:not(:focus){
+  border-bottom: none;
+  background-color: none;
 }
 
-.container input:not(:focus){
-  transition: all 0.5s ease-in-out;
-  border-bottom: 2px solid gray;
-}
-
-.container input:hover {
-  transform: scale(1.02);
-  background-color: rgba(245, 245, 245, 0.582);
-  border-bottom: 2px solid darkslateblue;
-  transition: all 0.3s ease;
-}
 
 @media (max-width: 768px) {
   .container {
@@ -155,14 +164,37 @@ ul {
     transition: all 0.5s ease-in-out;
     margin-bottom: 2rem;
     padding: 1.5rem;
+    line-height: normal;
   }
 
 
   h1 {
-    font-size: 1.5rem;
-    scale: 0.9;
+    font-size: 2rem;
     margin: 1rem auto;
     align-content: center;
     transition: all 0.5s ease-in-out;
+  }
+
+  .container input {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .container input[type="submit"] {
+    width: 100%;
+  }
+
+  .container input[type="reset"]  {
+    width: 100%;
+  }
+
+  .container p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .container label{
+    font-size: 1.9rem;
+    line-height: 2.5rem;
   }
 }
