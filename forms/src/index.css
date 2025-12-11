@@ -7,19 +7,23 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(45deg, #5A84CD, #A35ACD, #5A84CD, #A35ACD);
+  margin: 0;
+  background: linear-gradient(45deg, 
+    #5A84CD, 
+    #6A74CD, 
+    #A35ACD, 
+    #CD5A84, 
+    #5A84CD
+  );
   background-size: 400% 400%;
-  animation: animate 10s ease infinite;
+  animation: gradientFlow 12s linear infinite;
 }
 
-@keyframes animate {
-  0% {
+@keyframes gradientFlow {
+  0%, 100%  {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
