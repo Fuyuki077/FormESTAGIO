@@ -193,7 +193,7 @@ function App() {
         <label htmlFor="reservista_pcd">
           Sou pessoa com deficiência (PCD) e quero me candidatar às vagas reservadas aos(às) candidatos(as) PCD.
         </label>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <input 
             type="checkbox" 
             id="reservista_pcd" 
@@ -225,14 +225,15 @@ function App() {
         />
       </div>
 
-
-      <div /* Submit Button */>
-      <input type="submit" value="Enviar" />
-      </div>
-    
+<div class="parent">
       <div /* Reset Button */>
         <input type="reset" />
       </div>
+      <div /* Submit Button */>
+      <input type="submit" value="Enviar" />
+      </div>
+</div>
+
 
     </div>
       </form>

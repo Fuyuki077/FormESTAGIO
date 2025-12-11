@@ -3,12 +3,9 @@ h1 {
     margin: 3rem;
     font-family: 'Lucida Sans', sans-serif;
     color: white;
-    scale: 1;
 }
 
 ul {
-  list-style-type: none; /* Remove as bolinhas */
-  /* ou */
   list-style: none; /* Remove bolinhas e outros marcadores */
 }
 
@@ -17,8 +14,9 @@ ul {
   width: 50%;
   margin: 0 auto 1rem;
   line-height: 1.5rem;
-  background-color: rgba(245, 255, 255, 0.786);
+  background-color: rgba(245, 255, 255, 0.705);
   border-radius: 6px;
+  border: 10px double rgba(147, 147, 147, 0.261);
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -48,29 +46,23 @@ ul {
   outline: none;
   cursor: pointer;
   background-color: transparent;
-  filter: opacity(100px);
-  z-index: 1;
-
-  display: flex;
-  flex-direction: column;     /* Label acima do input */
   width: 100%;
 }
 
 .container label{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
-
   font-weight: bold;
   text-align: justify;
   margin-bottom: 0.5rem;      /* Espaço entre label e input */
-  color: #333;
+  color: #272727;
   display: flex;
   padding-left: 0.5rem;
   flex-direction: column; 
 
 }
 .container p {  
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   color: #1d1d1d;
   text-align: justify;
@@ -89,6 +81,12 @@ ul {
   margin-left: 0.5rem;
 }
 
+.container .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
 .container input[type="submit"]{
   width: 100px;
   background-color: slateblue;
@@ -96,6 +94,7 @@ ul {
   font-weight: bold;
   cursor: pointer;
   border-bottom: none;
+  float: right;
 }
 
 .container input[type="submit"]:hover{
@@ -117,6 +116,10 @@ ul {
   border-bottom: none;
 }
 
+.container input[type="reset"]:hover{
+  background-color: #404040;
+}
+
 .container input[type="reset"]:not(:focus){
   border-bottom: none;
 }
@@ -127,6 +130,7 @@ ul {
 
 .container input:focus{
   transition: all 0.3s ease-in-out;
+  background-color: rgba(245, 245, 245, 0.582);
   border-bottom: 2px solid darkslateblue;
 }
 
@@ -136,7 +140,8 @@ ul {
 }
 
 .container input:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
+  background-color: rgba(245, 245, 245, 0.582);
   border-bottom: 2px solid darkslateblue;
   transition: all 0.3s ease;
 }
