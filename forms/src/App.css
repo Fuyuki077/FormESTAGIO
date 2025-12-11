@@ -1,16 +1,14 @@
 h1 {
     text-align: center;  
-    transition: all 0.5s ease-in-out;
-    margin: 3rem auto;
+    margin: 3rem;
     font-family: 'Lucida Sans', sans-serif;
     color: white;
-    transform: perspective(500px) rotateX(10deg);
-    transition: transform 0.4s ease;
-    scale: 0.9;
+    scale: 1.5;
 }
 
-h1:hover {
-  transform: perspective(500px) rotateX(0deg);
+.container h1{
+  margin: 1rem 3rem 3rem 3rem;
+  color: #1d1d1d;
 }
 
 ul {
@@ -21,12 +19,11 @@ ul {
 
 
 .container{
-  margin: auto 10%;
+  margin: auto 10% 1.5rem;
   width: 80%;
   line-height: 1.5rem;
-  text-align: center;
   grid-template-columns: 1fr auto; /* Texto ocupa espaço restante, imagem com tamanho automático */
-  background-color: #f0f4f0d5;
+  background-color: rgba(245, 255, 255, 0.786);
   border-radius: 6px;
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,10 +36,11 @@ ul {
 
 }
 
+
 /* ESTILO PARA O FORM DENTRO DO CONTAINER */
 .container form {
   width: 100%;
-  max-width: 400px;          /* Largura máxima para o formulário */
+  max-width: 600px;          /* Largura máxima para o formulário */
 
 }
 
@@ -72,6 +70,17 @@ ul {
   padding-left: 0.5rem;
   flex-direction: column; 
 }
+.container p {
+  width: 70%; /* Ajuste conforme necessário */
+  text-align: justify;
+  text-justify: auto;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  color: #1d1d1d;
+  padding: 0;
+  margin: 0;
+}
 
 .container input[type="text"]{
   cursor: text;
@@ -86,6 +95,11 @@ ul {
   margin-left: 0.5rem;
 }
 
+.container input[type="file"]{
+  background-color: #ffffffd0;
+  border-radius: 2px;
+}
+
 .container input[type="submit"]{
   width: 100px;
   background-color: slateblue;
@@ -93,8 +107,6 @@ ul {
   font-weight: bold;
   cursor: pointer;
   border-bottom: none;
-  
-
 
 }
 .container input[type="submit"]:hover{
@@ -108,7 +120,7 @@ ul {
 } 
 
 .container input:focus{
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-bottom: 2px solid darkslateblue;
 }
 
@@ -117,23 +129,30 @@ ul {
   border-bottom: 2px solid gray;
 }
 
+.container input:hover {
+  transform: scale(1.01);
+  border-bottom: 2px solid darkslateblue;
+  transition: all 0.3s ease;
+}
 
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr; /* Em telas pequenas, uma coluna */
-    text-align: center;
+    text-align: justify;
     margin: 0;
     width: 100%;
     transition: all 0.5s ease-in-out;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
   }
 
-  .container label {
-    margin: 0 0 5px 0;
-
+  .container p {
+  width: 100%;
   }
 
   h1 {
     font-size: 1.5rem;
+    scale: 1.3;
     margin: 1rem auto;
     transition: all 0.5s ease-in-out;
   }
