@@ -42,10 +42,11 @@ ul {
 }
 
 .container input{
+  position: relative;
   margin-bottom: 1rem;
   padding: 0.5rem;
   border: none;
-  border-bottom: 2px solid gray;
+  border-bottom: 3px solid gray;
   border-radius: 2.5px;
   outline: none;
   cursor: pointer;
@@ -76,18 +77,18 @@ ul {
 .container input:focus{
   transition: all 0.3s ease-in-out;
   background-color: rgba(245, 245, 245, 0.582);
-  border-bottom: 2px solid darkslateblue;
+  border-bottom: 3px solid darkslateblue;
 }
 
 .container input:not(:focus){
   transition: all 0.5s ease-in-out;
-  border-bottom: 2px solid gray;
+  border-bottom: 3px solid gray;
 }
 
 .container input:hover {
   transform: scale(1.02);
   background-color: rgba(245, 245, 245, 0.582);
-  border-bottom: 2px solid darkslateblue;
+  border-bottom: 3px solid darkslateblue;
   transition: all 0.3s ease;
 }
 
