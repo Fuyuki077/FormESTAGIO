@@ -197,16 +197,19 @@ function App() {
         <label htmlFor="reservista_pcd">
           Sou pessoa com deficiência (PCD) e quero me candidatar às vagas reservadas aos(às) candidatos(as) PCD.
         </label>
+        <ul>
+        <li>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <input 
             type="checkbox" 
             id="reservista_pcd" 
-            name="reservista_pcd" 
           />
           <label htmlFor="reservista_pcd">
             Marque aqui se é PCD.
           </label>
         </div>
+        </li>
+        </ul>
       </div>
 
       <div /* Especificar a deficiência */>

@@ -59,11 +59,11 @@ ul {
   font-size: 1rem;
   font-weight: bold;
   text-align: justify;
-  margin-bottom: 0.5rem;      /* Espaço entre label e input */
   color: #272727;
   display: flex;
   padding-left: 0.5rem;
   flex-direction: column; 
+  height: 2rem;
 
 }
 .container p {  
@@ -100,9 +100,11 @@ ul {
 }
 
 .container input[type="checkbox"]{
-  width: auto;
+  width: min-content;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+  height: max-content;
+  cursor: pointer;
 }
 
 .container .parent {
@@ -200,7 +202,9 @@ ul {
   }
 
   .container label{
-    font-size: 1.9rem;
+    height: fit-content;
+    font-size: 1.8rem;
     line-height: 2.5rem;
+    margin-bottom: 1rem;
   }
 }
