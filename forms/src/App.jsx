@@ -163,53 +163,50 @@ function App() {
 
     <div className='container'>
       <h3>Reservistas</h3>
-      <div /* Vagas Reservadas para Negros e Indígenas */>
-        <label>
+
+      <div className="checkbox-group" /* Vagas Reservadas para Negros e Indígenas */>
+        <label className="group-label">
           Quero me candidatar às vagas reservadas...
         </label>
-        <ul>
-          <li> 
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+
+            <div className="checkbox-item">
               <input 
-              type="checkbox" 
-              id="teste1" />
-              <label htmlFor="teste1">
+                type="checkbox" 
+                id="negro" 
+                name="vaga_reservada"
+                value="negro"
+              />
+              <label htmlFor="negro">
                 Negro
               </label>
             </div>
-          </li>
 
-          <li>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <label className="group-label">Outros</label>
+
+            <div className="checkbox-item">
               <input 
-              type="checkbox" 
-              id="teste2" />
-              <label htmlFor="teste2">
+                type="checkbox" 
+                id="indigena"
+                name="vaga_reservada"
+                value="indigena"
+              />
+              <label htmlFor="indigena">
                 Indígena
               </label>
             </div>
-          </li>
 
-        </ul>
-      </div>
+          <div className="checkbox-item">
+              <input 
+                type="checkbox" 
+                id="reservista_pcd"
+                name="pcd"
+              />
+              <label htmlFor="reservista_pcd">
+                Sou pessoa com deficiência (PCD) e quero me candidatar às vagas reservadas aos(às) candidatos(as) PCD.
+              </label>
+          </div>
 
-      <div /* PCD */>
-        <label htmlFor="reservista_pcd">
-          Sou pessoa com deficiência (PCD) e quero me candidatar às vagas reservadas aos(às) candidatos(as) PCD.
-        </label>
-        <ul>
-        <li>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <input 
-            type="checkbox" 
-            id="reservista_pcd" 
-          />
-          <label htmlFor="reservista_pcd">
-            Marque aqui se é PCD.
-          </label>
-        </div>
-        </li>
-        </ul>
+
       </div>
 
       <div /* Especificar a deficiência */>
