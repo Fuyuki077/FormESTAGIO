@@ -5,7 +5,6 @@ function App() {
 
   return (
   <div>
-      <h1><span></span></h1>
       <form action="/processar-dados" method="post">
     <div className='container'>
       <h1>Caro(a) candidato(a). Faça sua inscrição aqui.</h1>

@@ -9,11 +9,11 @@ body {
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(45deg, 
-    #5A84CD, 
-    #6A74CD, 
-    #A35ACD, 
-    #CD5A84, 
-    #5A84CD
+    #CCBEF9, 
+    #6A8AEC, 
+    #1F4CE0, 
+    #355FE3, 
+    #6A8AEC
   );
   background-size: 400% 400%;
   animation: gradientFlow 12s linear infinite;
