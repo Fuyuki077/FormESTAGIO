@@ -180,8 +180,6 @@ function App() {
               </label>
             </div>
 
-            <label className="group-label">Outros</label>
-
             <div className="checkbox-item">
               <input 
                 type="checkbox" 
@@ -193,6 +191,8 @@ function App() {
                 Indígena
               </label>
             </div>
+
+            <label className="group-label">Outros</label>
 
           <div className="checkbox-item">
               <input 
